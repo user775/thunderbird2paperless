@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Thunderbird to Paperless-ngx</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Paperless-ngx settings</h1>
+      <form id="settings-form">
+        <label for="server-url">Server URL</label>
+        <input id="server-url" type="url" placeholder="http://paperless.local:8000" required />
+
+        <label for="api-token">API Token</label>
+        <input id="api-token" type="password" autocomplete="off" required />
+
+        <div class="action-row">
+          <button id="test-connection" type="button">Test connection</button>
+          <span id="connection-status" role="status"></span>
+        </div>
+
+        <label for="title-prefix">Title Prefix (optional)</label>
+        <input id="title-prefix" type="text" placeholder="Mail attachment: " />
+
+        <label class="checkbox-row" for="confirm-before-upload">
+          <input id="confirm-before-upload" type="checkbox" />
+          Confirm metadata before each upload
+        </label>
+
+        <h2>Default metadata (optional)</h2>
+
+        <label for="default-correspondent-name">Correspondent</label>
+        <input id="default-correspondent-name" type="text" list="correspondents-list" placeholder="Start typing a name" />
+        <datalist id="correspondents-list"></datalist>
+
+        <label for="default-document-type-name">Document Type</label>
+        <input id="default-document-type-name" type="text" list="document-types-list" placeholder="Start typing a name" />
+        <datalist id="document-types-list"></datalist>
+
+        <label for="default-tag-names">Tags (comma-separated names)</label>
+        <input id="default-tag-names" type="text" placeholder="Invoices, Finance" />
+
+        <p class="hint">Name lookups come from your Paperless server. You can also enter numeric IDs.</p>
+
+        <button type="submit">Save</button>
+      </form>
+      <p id="status" role="status"></p>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>

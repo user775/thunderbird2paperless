@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Thunderbird to Paperless-ngx",
+  "description": "Adds an attachment context-menu action to upload attachments directly to a configured Paperless-ngx server.",
+  "version": "0.3.1",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "thunderbird-to-paperless@example.local",
+      "strict_min_version": "128.0"
+    }
+  },
+  "icons": {
+    "48": "icons/paperless.svg",
+    "96": "icons/paperless.svg"
+  },
+  "permissions": [
+    "menus",
+    "messagesRead",
+    "mailTabs",
+    "messageDisplay",
+    "windows",
+    "storage",
+    "notifications",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true,
+    "browser_style": true
+  }
+}

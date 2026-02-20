@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Confirm Paperless Upload</title>
+    <link rel="stylesheet" href="confirm.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Confirm upload</h1>
+      <p id="attachment-name"></p>
+
+      <form id="confirm-form">
+        <label for="title">Title (optional override)</label>
+        <input id="title" type="text" />
+
+        <label for="correspondent-name">Correspondent (name or ID)</label>
+        <input id="correspondent-name" type="text" list="correspondents-list" />
+        <datalist id="correspondents-list"></datalist>
+
+        <label for="document-type-name">Document Type (name or ID)</label>
+        <input id="document-type-name" type="text" list="document-types-list" />
+        <datalist id="document-types-list"></datalist>
+
+        <label for="tag-names">Tags (comma-separated names or IDs)</label>
+        <input id="tag-names" type="text" />
+
+        <div class="actions">
+          <button type="submit">Upload</button>
+          <button id="cancel" type="button">Cancel</button>
+        </div>
+      </form>
+      <p id="status" role="status"></p>
+    </main>
+
+    <script src="confirm.js"></script>
+  </body>
+</html>

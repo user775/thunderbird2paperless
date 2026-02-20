@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font: 14px/1.4 sans-serif;
+}
+
+main {
+  max-width: 46rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.checkbox-row input {
+  margin: 0;
+}
+
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+}
+
+#connection-status {
+  min-height: 1em;
+}
+
+input {
+  padding: 0.5rem;
+  font: inherit;
+}
+
+button {
+  margin-top: 1rem;
+  width: fit-content;
+  padding: 0.5rem 0.9rem;
+  font: inherit;
+}
+
+.hint {
+  margin: 0.4rem 0 0;
+  color: #444;
+  font-size: 0.92em;
+}
+
+#status {
+  min-height: 1.2em;
+  margin-top: 1rem;
+}
