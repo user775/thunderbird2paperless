@@ -33,7 +33,6 @@ It uploads each attachment to Paperless-ngx using:
 
 ## Notes
 
-- Host permissions are broad (`http://*/*`, `https://*/*`) to support local-network Paperless URLs.
 - Metadata lookups come from:
   - `/api/correspondents/`
   - `/api/document_types/`
